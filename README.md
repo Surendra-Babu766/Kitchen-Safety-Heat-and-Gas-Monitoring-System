@@ -56,7 +56,7 @@
 
 ## 🎯 Overview & Objectives
 
-Designed as an advanced embedded systems project[cite: 25], this application provides automated protection against kitchen hazards by monitoring thermal and atmospheric conditions:
+Designed as an advanced embedded systems project, this application provides automated protection against kitchen hazards by monitoring thermal and atmospheric conditions:
 * **Temperature Monitoring:** Continuously tracks ambient kitchen temperature via an **LM35** analog sensor connected to the on-chip ADC.
 * **Gas Leakage Detection:** Senses combustible gases (LPG, smoke, methane) using an **MQ-2** gas sensor module[cite: 25, 26].
 * **Multi-Modal Alerting:** Instantly activates an audible buzzer (`P1.27`) and a visual active-high alert LED (`P0.0`) upon threshold breaches.
@@ -70,7 +70,7 @@ Designed as an advanced embedded systems project[cite: 25], this application pro
 The following block diagram illustrates the peripheral connections and core interfaces centered around the LPC2148 ARM7 microcontroller:
 
 <p align="center">
-  <img width="424" height="363" alt="block_diagram png" src="https://github.com/user-attachments/assets/81b57d4d-355f-4208-8bf2-b37e1dcf46c9" />
+<img width="1831" height="859" alt="image" src="https://github.com/user-attachments/assets/6335830f-2185-4270-a4ec-464640b2498b" />
 
 </p>
 
@@ -190,7 +190,7 @@ lpc2148-kitchen-safety/
 
 ##  Interactive Menu System & Configuration Workflow
 
-Pressing **Switch 1 (`EINT1`)** interrupts live monitoring to launch the secure configuration panel[cite: 13, 14]. Below is the step-by-step breakdown matching your preview screens and operational flow.
+Pressing **Switch 1 (`EINT1`)** interrupts live monitoring to launch the secure configuration panel. Below is the step-by-step breakdown matching your preview screens and operational flow.
 
 ---
 ### Access and Menu Flow
@@ -217,35 +217,38 @@ graph TD
 | Password entry | Wrong password | Three wrong tries |
 | :---: | :---: | :---: |
 |<img width="300" height="110" alt="WhatsApp Image 2026-10-02 at 7 15 10 PM" src="https://github.com/user-attachments/assets/6898367b-89a9-416f-bbd8-ed2f6869e174" />|<img width="300" height="110" alt="LCD Module Displays Wrong Password" src="https://github.com/user-attachments/assets/7c91b9c0-61b5-4d4f-907c-1fe3e7b13fa8" />| <img width="300" height="110" alt="Green PCB with Backlit LCD Warning" src="https://github.com/user-attachments/assets/b484b17a-1382-4a90-aaeb-e2bc16d2a208" />|
-| Digits appear as `*` | Access Denied and a short beep | Locked for 10 s with a countdown, then the password is asked again[cite: 12] |
+| Digits appear as `*` | Access Denied and a short beep | Locked for 10 s with a countdown, then the password is asked again |
 
 ---
 
 ### 2. Settings
+---
 
 | Settings menu | 
 | :---: |
 | <img width="300" height="110" alt="WhatsApp Image 2026-10-02 at 7 15 11 PM (1)" src="https://github.com/user-attachments/assets/faef3d4c-f36d-43c0-8c92-18db3a2fd039" />|
-| Choose 1 to 4[cite: 13] |
-> ⏱️ **Auto-Close Feature:** The menu closes by itself after 30 seconds without a key press[cite: 13].
-
+| Choose 1 to 4 |
+> ⏱️ **Auto-Close Feature:** The menu closes by itself after 30 seconds without a key press.
+---
 ### 3. Menu Options Reference Table
-
+---
 | Key | Option | What it does |
 | :---: | :---: | :---|
-| **1** | **RTC** | Set the clock and date (see RTC menu)[cite: 13] |
-| **2** | **SET** | `1.TEMP` – set the temperature limit (0–200 °C), `2.GAS` – set the gas limit (0–1000)[cite: 13] |
-| **3** | **PASS** | Change the password: enter the current password, then the new one, then confirm it[cite: 13] |
-| **4** | **EXIT** | Return to the normal screen[cite: 13] |
+| **1** | **RTC** | Set the clock and date (see RTC menu) |
+| **2** | **SET** | `1.TEMP` – set the temperature limit (0–200 °C), `2.GAS` – set the gas limit (0–1000) |
+| **3** | **PASS** | Change the password: enter the current password, then the new one, then confirm it |
+| **4** | **EXIT** | Return to the normal screen |
 
 ---
 ### 3.RTC Menu
+---
 |RTC Menu|Time Menu|Date Menu|
 |:---:|:---:|:---:|
 |<img width="300" height="110" alt="WhatsApp Image 2026-10-02 at 7 15 11 PM (2)" src="https://github.com/user-attachments/assets/cecc4837-560a-4ad7-b6ce-8f925fb4d7ed" />|<img width="300" height="110" alt="Green PCB LCD Display with Pixel Menu" src="https://github.com/user-attachments/assets/d8f1097b-ca1b-4fda-8d54-b7ef9a374a6e" />|<img width="300" height="110" alt="WhatsApp Image 2026-10-02 at 7 15 12 PM (1)" src="https://github.com/user-attachments/assets/584037bd-bbe1-41a9-b250-7fa8fdc58969" />
-| Choose 1 to 3[cite: 13] | Set hour, minute, second| date, month, year[cite: 13] |
+| Choose 1 to 3 | Set hour, minute, second| date, month, year |
 ---
 ### 4.Set Point
+---
 |Set Point Menu|Temp Value|Gas Value|
 |---|---|---|
 |<img width="300" height="110" alt="WhatsApp Image 2026-10-02 at 7 15 13 PM" src="https://github.com/user-attachments/assets/5da1b01e-9f9e-4930-acf9-71c320081473" />|<img width="300" height="110" alt="WhatsApp Image 2026-10-02 at 7 15 12 PM (2)" src="https://github.com/user-attachments/assets/902121c7-b4f5-491d-a53c-3e4e1326a63b" />|<img width="300" height="110" alt="WhatsApp Image 2026-10-02 at 7 15 13 PM (1)" src="https://github.com/user-attachments/assets/96c6696a-309d-4c63-a9ba-668ba1819475" />|
@@ -254,5 +257,17 @@ graph TD
 
 >  Press c For Clear a Digit
 ---
-### Set Password
+### 5.Set Password
+---
+| Enter Old Password | Verification Error | Enter New Password |
+| :---: | :---: | :---: |
+|<img width="300" height="110" alt="image" src="https://github.com/user-attachments/assets/b8b5ee2a-9e10-40de-8e62-76b3427f21b6" />|<img width="300" height="110" alt="image" src="https://github.com/user-attachments/assets/558546fa-9292-4033-acbc-994e80012129" />|<img width="300" height="110" alt="image" src="https://github.com/user-attachments/assets/dcc47d34-7c1c-4eaa-b5de-84be228735ed" />|
+| Prompts the user to enter their current system passcode | Displays warning message if the typed old password is incorrect | Prompts for the new passcode with character masking (`*`) |
+## Author
 
+**G Surendra Babu**  
+* Bachelor of Technology in Electrical and Electronics Engineering  
+* Embedded Systems Trainee at Vector India  
+* [GitHub Profile](https://github.com/Surendra-Babu766)
+
+<p align="center"><sub>⭐ If you found this project helpful or inspiring, please give it a star!</sub></p>
