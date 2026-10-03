@@ -70,7 +70,8 @@ Designed as an advanced embedded systems project, this application provides auto
 The following block diagram illustrates the peripheral connections and core interfaces centered around the LPC2148 ARM7 microcontroller:
 
 <p align="center">
-<img width="1831" height="859" alt="image" src="https://github.com/user-attachments/assets/6335830f-2185-4270-a4ec-464640b2498b" />
+<img width="1831" height="859" alt="image" src="https://github.com/user-attachments/assets/0dc23746-88b1-40f7-a1fd-e5f855979476" />
+
 
 </p>
 
